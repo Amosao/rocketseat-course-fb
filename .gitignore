@@ -3,3 +3,5 @@ dist/
 
 #dependecies
 node_modules/
+package-lock.json
+yarn.lock
