@@ -1,1 +1,5 @@
+#Project folders
+dist/
+
+#dependecies
 node_modules/
