@@ -3,10 +3,10 @@
     "host": "localhost",
     "port": 5432,
     "username": "postgres",
-    "password": "itix.123",
+    "password": "gobarberpsw",
     "database": "gobarberdb",
     "entities": [
-        "./src/models/*.ts"
+        "./src/entities/*.ts"
     ],
     "migrations": [
         "./src/database/migrations/*.ts"

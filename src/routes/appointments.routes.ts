@@ -14,13 +14,13 @@ appointmentsRouter.get("/", async (req, res) => {
 
 appointmentsRouter.post('/', async (req, res) => {
     try {
-        const { provider, date } = req.body;
+        const { provider_id, date } = req.body;
 
         const parsedDate = parseISO(date);
 
         const createService = new CreateAppointmentService();
 
-        const appointment = await createService.execute({ provider, date: parsedDate });
+        const appointment = await createService.execute({ provider_id, date: parsedDate });
 
         return res.json(appointment);
 

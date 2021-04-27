@@ -1,17 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import UserModel from './User.model';
 
-@Entity('appointments')
-class Appointment {
-
-    @PrimaryGeneratedColumn('uuid')
+class AppointmentModel {
     id: string;
-
-    @Column()
-    provider: string;
-
-    @Column('timestamp with time zone')
+    provider_id: string;
+    provider: UserModel;
     date: Date;
-
+    created_at: Date;
+    updated_at: Date;
 }
 
-export default Appointment;
+export default AppointmentModel;

@@ -7,9 +7,11 @@ export default class Appointments1612292522991 implements MigrationInterface {
             new Table({
                 name: "appointments",
                 columns: [
-                    {name: 'id', type: 'varchar', isPrimary: true, generationStrategy: 'uuid', default: 'uuid_generate_v4()'},
-                    {name: 'provider', type: 'varchar', isNullable: false},
-                    {name: 'date', type: 'timestamp with time zone', isNullable: false}
+                    { name: 'id', type: 'uuid', isPrimary: true, generationStrategy: 'uuid', default: 'uuid_generate_v4()' },
+                    { name: 'provider', type: 'varchar', isNullable: false },
+                    { name: 'date', type: 'timestamp with time zone', isNullable: false },
+                    { name: 'created_at', type: 'timestamp', default: 'now()', isNullable: false },
+                    { name: 'updated_at', type: 'timestamp', default: 'now()', isNullable: false }
                 ]
             })
         );
